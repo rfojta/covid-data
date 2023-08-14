@@ -5,6 +5,11 @@ terraform {
       version = "~> 5.0"
     }
   }
+  backend "s3" {
+    bucket = "rfojta-state"
+    key = "python-covid-data/terraform.state"
+    region = "eu-central-1"
+  }
 }
 
 # Configure the AWS Provider
